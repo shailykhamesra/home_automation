@@ -1,0 +1,20 @@
+one:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  username: MyString
+  password_digest: <%= BCrypt::Password.create('secret') %>
+
+two:
+  first_name: MyString
+  last_name: MyString
+  email: MyString1
+  username: MyString1
+  password_digest: <%= BCrypt::Password.create('secret') %>
+
+three:
+  first_name: MyString2
+  last_name: MyString2
+  email: MyString12
+  username: MyString12
+  password_digest: <%= BCrypt::Password.create('secret') %>

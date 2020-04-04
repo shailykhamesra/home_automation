@@ -1,0 +1,11 @@
+one:
+  name: MyString
+  pin: 1
+  configure: 2017-02-21 15:16:25
+  automated: false
+
+two:
+  name: MyString
+  pin: 1
+  configure: 2017-02-21 15:16:25
+  automated: false
