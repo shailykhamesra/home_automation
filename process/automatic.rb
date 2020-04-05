@@ -1,4 +1,4 @@
-require File.expand_path('/home/nrapesh/ruby/home_automation/config/environment', __FILE__)
+require File.expand_path(I18n.t 'env', __FILE__)
 
 loop do
   controls = Control.where(automated: true)

@@ -17,10 +17,10 @@ class LoginController < ApplicationController
     if authorized_user
       session[:user_id] = authorized_user.id
       session[:username] = authorized_user.username
-      flash[:notice] = 'Successfully logged in.'
+      flash[:notice] = I18n.t 'login.success'
       redirect_to(index_index_path)
     else
-      flash.now[:notice] = "Invalid Username/Password Combination."
+      flash.now[:notice] = I18n.t 'login.failure'
       render('login')
     end
 
@@ -29,7 +29,7 @@ class LoginController < ApplicationController
   def logout
     session[:user_id] = nil
     session[:username] = nil
-    flash[:notice] = 'Logged out'
+    flash[:notice] = I18n.t 'login.sign_out'
     redirect_to(login_login_path)
   end
 

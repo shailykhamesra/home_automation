@@ -16,18 +16,17 @@ class HomeController < ApplicationController
     @switch.toggle :control
     @switch.save
     if @switch.control
-      system "ruby /home/nrapesh/ruby/home_automation/automatic_controller.rb start"
+      system I18n.t 'path_start'
       Control.all.each do |control|
         control.update(automated: true)
       end
-      flash[:notice] = "Automatic mode on"
+      flash[:notice] = I18n.t 'mode.automatic'
     else
-      flash[:notice] = "Manual mode on"
-      system "ruby /home/nrapesh/ruby/home_automation/automatic_controller.rb stop"
+      system I18n.t 'path_stop'
       Control.all.each do |control|
         control.update(automated: false)
       end
-      flash[:notice] = "Manual mode on"
+      flash[:notice] = I18n.t 'mode.manual'
     end
     redirect_to :action => :index
   end

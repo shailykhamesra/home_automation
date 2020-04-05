@@ -13,9 +13,9 @@ class ManualController < ApplicationController
     @control.toggle :automated
     @control.save
     if @control.automated
-      flash[:notice] = "#{@control.name} is turned on"
+      flash[:notice] = "#{@control.name} #{I18n.t 'turn.start'}"
     else
-      flash[:notice] = "#{@control.name} is turned off"
+      flash[:notice] = "#{@control.name} #{I18n.t 'turn.stop'}"
     end
     redirect_to :action => :index
   end
