@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 2020_04_05_070749) do
   create_table "controls", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.integer "pin"
-    t.time "configure", default: "2000-01-01 07:12:14"
-    t.time "configureoff", default: "2000-01-01 07:12:14"
+    t.time "configure", default: "2000-01-01 07:58:57"
+    t.time "configureoff", default: "2000-01-01 07:58:57"
     t.boolean "automated", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

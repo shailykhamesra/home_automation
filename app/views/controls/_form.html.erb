@@ -1,0 +1,55 @@
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#switch').bootstrapSwitch();
+      $('#switch').bootstrapSwitch().on('switchChange.bootstrapSwitch', function (event, state){
+        document.getElementById("switch").value = "1";
+      });
+      document.getElementById("switch").value = "0";
+  });
+</script>
+
+<%= form_for(control) do |f| %>
+  <% if control.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(control.errors.count, "error") %> prohibited this control from being saved:</h2>
+
+      <ul>
+      <% control.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div align="center">
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pin %>
+    <%= f.select :pin, @pins %>
+  </div>
+
+  <div class="field">
+    <%= f.label :manual_mode %>
+    <%= f.check_box :automated, :id => 'switch', :data => { :size=>'small', 'on-color'=>'success', 'on-text'=>'OFF', 'off-text'=>'ON' } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :turn_on_time_if_automatic %>
+    <%= f.time_select :configure, :ampm => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :turn_off_time_if_automatic %>
+    <%= f.time_select :configureoff, :ampm => true %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  </div>
+<% end %>

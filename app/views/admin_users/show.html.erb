@@ -1,0 +1,33 @@
+<style type="text/css">
+  html{ 
+    background: url("../../backdrop.png");
+    opacity: 1; 
+    margin:0; padding:10%; height:100%; 
+  }
+</style>
+<div align="center">
+<br>	
+<p>
+  <strong>First name:</strong>
+  <%= @admin_user.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @admin_user.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @admin_user.email %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @admin_user.username %>
+</p>
+
+<%= link_to 'Edit', edit_admin_user_path(@admin_user) %> |
+<%= link_to 'Back', admin_users_path %>
+<br>
+</div>

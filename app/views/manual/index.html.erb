@@ -1,0 +1,23 @@
+
+<p id="notice"><%= notice %></p>
+
+<h1 align='center'>Manual Control</h1>
+<% for control in @controls %>
+
+<table valign="middle" align='center'>
+
+  <tr >
+    <th width="90%"> <h3><%= control.name %></h3> </th>
+    <td width="80%">
+      <label class="switch">
+        <input type="checkbox" id="toggle" name="<%= control.id %>"<%="checked" if control.automated %> >
+        <div class="slider round"></div>
+      </label>
+    </td>
+  </tr>
+
+</table>
+
+<% end %>
+
+<br>

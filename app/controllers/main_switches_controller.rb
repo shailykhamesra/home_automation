@@ -64,9 +64,9 @@ class MainSwitchesController < ApplicationController
 
     def reset_services
       if @main_switch.control
-        system "ruby /home/nrapesh/ruby/smart_home/automatic_controller.rb start"
+        system "ruby /home/nrapesh/ruby/home_automation/automatic_controller.rb start"
       else
-        system "ruby /home/nrapesh/ruby/smart_home/automatic_controller.rb stop"
+        system "ruby /home/nrapesh/ruby/home_automation/automatic_controller.rb stop"
       end
     end
 end

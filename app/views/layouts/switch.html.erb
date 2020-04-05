@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      /*body { 
+        background: url("../../backdrop.png");
+        margin:0; padding:0; height:100%; }
+        iframe { position:fixed; display:block; width:100%; border:none; 
+      }
+    </style>
+    <title>Project</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('input:checkbox').bootstrapSwitch();
+    });
+    </script>
+
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
