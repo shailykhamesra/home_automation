@@ -79,3 +79,19 @@ rvm -v
 
 15. You can check logs for background jobs which will tell wether any device is in on state at this time
     process -> automatic.rb.output
+
+ 
+
+home automation working -->
+
+On opening localhost3000 you will land on the login page, where you need to enter the above provided username and password.
+This will lead you to main switch, here you need to turn the main switch to automatic mode by toggling the button where manual is writen. Now click on create main switch. 
+You will create the main switch of you home which will be on automatic mode.
+Now its time to create the controls i.e the devices you will like to add and mention the device status as manual and automatic mode. For automatic mode the start time and stop time will work as the on and off time of switch.
+Upon creation of switch if now you wish to run devices maually and act just as remote you can toggle the control to automatic mode by toggling main switch button, which will lead you to manual mode.
+For manual mode on and off would be displayed in upper left corner of screen.
+You can also show, edit and destroy the controls.
+For automatic controls logs please check (process --> automatic.rb.output) file which will show when the control is on and switch off when off.
+If you want multiple members to take control of home automation, you can click on manage users by clicking on left corner pannel which will give you options to manage user.
+Managing users have functionality of adding, removing and editing.
+After all these quick simple steps you can logout og the system using left pannel.
